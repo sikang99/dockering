@@ -1,0 +1,4 @@
+FROM golang
+MAINTAINER Stoney.Kang, sikang99@gmail.com
+ADD hello.go /var/server/hello.go
+CMD ["go", "run", "/var/server/hello.go"]

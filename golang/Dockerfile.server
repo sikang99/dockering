@@ -1,0 +1,5 @@
+FROM golang
+MAINTAINER Stoney.Kang, sikang99@gmail.com
+ADD server.go /var/server/server.go
+EXPOSE 4444
+CMD ["go", "run", "/var/server/server.go"]
