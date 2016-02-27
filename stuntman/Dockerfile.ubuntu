@@ -1,0 +1,13 @@
+FROM ubuntu:latest
+MAINTAINER Stoney Kang <sikang99@gmail.com>
+
+RUN apt-get -y update
+RUN apt-get update && apt-get install -y g++ make libboost-dev libssl-dev
+
+ADD ./stunserver /stunserver
+WORKDIR /stunserver
+RUN make
+
+EXPOSE 3478
+
+CMD ["/stunserver/stunserver"]

@@ -1,0 +1,15 @@
+FROM alpine:latest
+MAINTAINER Stoney Kang <sikang99@gmail.com>
+
+RUN apk update
+RUN apk add make
+RUN apk add g++ boost
+
+ADD ./stunserver /stunserver
+WORKDIR /stunserver
+RUN make
+
+EXPOSE 3478
+
+#CMD ["sh"]
+CMD ["/stunserver/stunserver"]
