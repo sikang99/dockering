@@ -1,10 +1,10 @@
 #
-# Apache Drill
+# Makefile template for docker handling
 #
 all: usage
 
-IMAGE=sequenceiq/drill
-NAME=drill
+NAME=mywork
+IMAGE=$(USER)/$(NAME)
 #---------------------------------------------------------------------------------
 docker d:
 	@echo ""
