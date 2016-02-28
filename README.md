@@ -7,11 +7,11 @@ https://dzone.com/refcardz/getting-started-with-docker-1
 ###Docker storage 101: How storage works in Docker
 http://www.computerweekly.com/feature/Docker-storage-101-How-storage-works-in-Docker
 
-
+```
 Makefile
 Makefile.template
 README.md
-README.txt
+```
 
 ```
 cassandra/
