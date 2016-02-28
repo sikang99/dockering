@@ -26,6 +26,9 @@ view v:
 readme md:
 	vi README.md
 
+template mt:
+	vi Makefile.template
+
 make m:
 	vi Makefile
 

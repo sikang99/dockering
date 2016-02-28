@@ -4,19 +4,45 @@
 all: usage
 
 NAME=mywork
+TAG=0.1
 IMAGE=$(USER)/$(NAME)
 #---------------------------------------------------------------------------------
 docker d:
 	@echo ""
-	@echo "make (docker) [dp|ds|di]"
+	@echo "make (docker) [db(uild)|dp(ull)|ds(earch)|di(nspect)|dc(ommit)|dr(un)]"
 	@echo ""
 
+db:
+	@docker build -f Dockerfile -t $(IMAGE):$(TAG) .
 ds:
 	@docker search $(NAME)
 dp:
 	@docker pull $(IMAGE)
 di:
 	@docker inspect $(IMAGE)
+dc:
+	@docker commit $(IMAGE):$(TAG)
+dr:
+	@docker run --rm -it --name $(NAME) $(IMAGE) /bin/bash
+
+#---------------------------------------------------------------------------------
+run r:
+	@echo ""
+	@echo "make (run) [rd(aemon)|rs(hell)|re(xec)]"
+	@echo ""
+
+P_OPT=
+V_OPT=	# -v /host:/container, --volumes-from=$(IMAGE)
+E_OPT=
+OPTION=$(P_OPT) $(V_OPT) $(E_OPT)
+
+rd:
+	@docker run -d -it $(OPTION) --name $(NAME) $(IMAGE)
+rs:
+	@docker run --rm -it $(OPTION) --name $(NAME) $(IMAGE) /bin/bash
+re:
+	@docker exec --rm -it $(OPTION) --name $(NAME) $(IMAGE) /bin/bash
+	
 
 #---------------------------------------------------------------------------------
 md:

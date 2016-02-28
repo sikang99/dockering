@@ -7,6 +7,9 @@ https://dzone.com/refcardz/getting-started-with-docker-1
 ###Docker storage 101: How storage works in Docker
 http://www.computerweekly.com/feature/Docker-storage-101-How-storage-works-in-Docker
 
+###Understanding Volumes in Docker
+http://container-solutions.com/understanding-volumes-docker/
+
 ###About Flocker
 https://clusterhq.com/flocker/introduction/
 
