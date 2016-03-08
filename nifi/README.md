@@ -13,6 +13,9 @@ README.md for NiFi
 - [mcapavan/NiFi](https://github.com/mcapavan/NiFi)
 - [jfrazee/awesome-nifi](https://github.com/jfrazee/awesome-nifi)
 
+- [Nifi.rocks](http://www.nifi.rocks/)
+- [Fun with Apache NiFi](http://funnifi.blogspot.com/)
+- [Awesome Nifi](https://github.com/jfrazee/awesome-nifi)
 
 ### Articles
 - [IoT streaming with MQTT and Apache NiFi](https://richardstechnotes.wordpress.com/2015/12/26/iot-streaming-with-mqtt-and-apache-nifi/) 
